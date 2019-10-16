@@ -1,1 +1,5 @@
-node_modules
+# OS or Editor folders
+.settings
+
+# NPM packages folder.
+node_modules/
