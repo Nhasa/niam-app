@@ -16,7 +16,7 @@
   },
   "standard": {
     "env": [
-      "mocha"
+      "mocha", "browser "
     ]
   },
   "author": "Mohammad Nhasa",
