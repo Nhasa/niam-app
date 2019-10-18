@@ -12,6 +12,9 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "standard": {
+    "env": [ "mocha" ]
+  },
   "author": "Mohammad Nhasa",
   "license": "ISC",
   "dependencies": {
