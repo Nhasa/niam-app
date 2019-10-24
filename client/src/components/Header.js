@@ -8,8 +8,6 @@ const Header = () => (
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
         <Nav.Link href="#customers">Customers</Nav.Link>
-        <Nav.Link href="#transations">Transactions</Nav.Link>
-        <Nav.Link href="#mutations">Mutations</Nav.Link>
       </Nav>
       <Nav>
         <Nav.Link href="#logout">
