@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Customers = () => (
+const CustomerList = () => (
   <div>Customer List</div>
 )
 
-export default Customers
+export default CustomerList

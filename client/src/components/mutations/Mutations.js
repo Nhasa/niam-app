@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Mutations = () => (
+const MutationList = () => (
   <div>Mutation List</div>
 )
 
-export default Mutations
+export default MutationList
