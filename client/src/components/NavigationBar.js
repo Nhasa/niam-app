@@ -15,11 +15,11 @@ const UserLinks = ({ logout }) => (
 
 const GuestLinks = () => (
   <Nav>
-    <Nav.Link>
-      <Link to='/signup'>Sign Up</Link>
+    <Nav.Link as={Link} to='/signup'>
+      Sign Up
     </Nav.Link>
-    <Nav.Link>
-      <Link to='/login'>Login</Link>
+    <Nav.Link as={Link} to='/login'>
+      Login
     </Nav.Link>
   </Nav>
 )
@@ -34,10 +34,8 @@ class NavigationBar extends React.PureComponent {
     const { isAuthenticated } = this.props.auth
     return (
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand>
-          <Link to='/'>
-            Home
-          </Link>
+        <Navbar.Brand as={Link} to='/'>
+          Home
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

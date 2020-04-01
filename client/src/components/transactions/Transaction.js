@@ -1,7 +1,10 @@
 import React from 'react'
+import { Card } from 'react-bootstrap'
 
-const Transaction = () => (
-  <div>Transaction</div>
+const Transaction = ({ name }) => (
+  <Card>
+    <Card.Body>{name}</Card.Body>
+  </Card>
 )
 
 export default Transaction

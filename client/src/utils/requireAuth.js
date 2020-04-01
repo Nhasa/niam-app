@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { addFlashMessage } from '../actions/flashMessages';
 
 export default function (ComposedComponent) {
-  class Authenticate extends React.Component {
+  class Authenticate extends React.PureComponent {
     componentWillMount() {
       if (!this.props.isAuthenticated) {
         this.props.addFlashMessage({
@@ -37,9 +37,9 @@ export default function (ComposedComponent) {
     router: React.PropTypes.object.isRequired
   }
 
-  function mapStateToProps(state) {
+  const mapStateToProps = ({ auth }) => {
     return {
-      isAuthenticated: state.auth.isAuthenticated
+      isAuthenticated: auth.isAuthenticated
     }
   }
 

@@ -1,19 +1,13 @@
-import express from 'express'
-import path from 'path'
+import { Config } from './config/config'
+import { Server } from './servers/server'
+import { UsersRouter } from './routers/usersRouter'
+import { UserService } from './services/userService'
 
-const app = express()
+const config = new Config()
+  .setPort(process.env.PORT || 5000)
+  .addTransient('UserService', UserService)
 
-if (process.env.NODE_ENV === 'production') {
-  // Express will serve up production assets
-  // like our main.js file, or main.css file!
-  app.use(express.static('client/build'));
+new Server(config)
+  .addRouter('/api/users', new UsersRouter(config))
+  .start()
 
-  // Express will serve up the index.html file
-  // if it doesn't recognize the route
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
-
-const PORT = process.env.PORT || 5000
-app.listen(PORT)

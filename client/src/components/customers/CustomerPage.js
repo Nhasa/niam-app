@@ -1,15 +1,15 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap'
-import LoginForm from './LoginForm'
+import CustomerForm from './CustomerForm';
 
 const mdColConfig = { span: 4, offset: 4 }
 
-const LoginPage = () => (
+const CustomerPage = () => (
   <Row>
     <Col md={mdColConfig}>
-      <LoginForm />
+      <CustomerForm />
     </Col>
   </Row>
 )
 
-export default LoginPage;
+export default CustomerPage;

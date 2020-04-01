@@ -6,12 +6,14 @@ import { Row, Col } from 'react-bootstrap'
 import { userSignupRequest, isUserExists } from '../../actions/signupActions';
 import { addFlashMessage } from '../../actions/flashMessages';
 
-class SignupPage extends React.Component {
+const mdColConfig = { span: 4, offset: 4 }
+
+class SignupPage extends React.PureComponent {
   render() {
     const { userSignupRequest, addFlashMessage, isUserExists } = this.props;
     return (
       <Row>
-        <Col md={{ span: 4, offset: 4 }}>
+        <Col md={mdColConfig}>
           <SignupForm addFlashMessage={addFlashMessage}
             isUserExists={isUserExists}
             userSignupRequest={userSignupRequest} />
@@ -27,4 +29,4 @@ SignupPage.propTypes = {
   isUserExists: PropTypes.func.isRequired
 }
 
-export default connect((state) => { return {} }, { isUserExists, addFlashMessage, userSignupRequest })(SignupPage);
+export default connect(() => { return {} }, { isUserExists, addFlashMessage, userSignupRequest })(SignupPage);
